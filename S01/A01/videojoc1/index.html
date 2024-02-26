@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="es"> 
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./mk_files/style.dbdc3442.css">
+    <title>Metroid</title>
+ 
+
+  </head>
+  <style>
+    
+        #top-menu {
+      background: #1a1e2b;
+      width: 110%;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #top-menu a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    #top-menu a:hover {
+      color: #9fa4e9;
+    }
+    #main {
+      margin-top: 40px;
+    }
+
+    ::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6d72c3; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1a1e2b; /* Color del fondo de la barra de desplazamiento */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0c0f17;
+    color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+  </style>
+  <body class="theme-night">
+    <div id="top-menu">
+      <a href="../../indexS01/index.html">Menú</a>
+      <a href="#">Videojoc (Metroid)</a>
+      <a href="../../A01/videojoc2/index.html">Videojoc (Pac-Man)</a>
+      <a href="../../A02/modelsdenegoci/index.html">Models de negoci</a>
+      <a href="../../A03/generesdevideojocs/index.html">Gèneres de videojocs</a>
+      <a href="../../A04/professionals/index.html">Professionals</a>
+      <a href="../../A05/fases-i-tasques/index.html">Fases i tasques</a>
+      <a href="../../A06/modelmda-elements/index.html">Model MDA i Elements</a>
+      <a href="../../A06/tipusdejugadors/index.html">Tipus de jugadors</a>
+    </div>
+
+
+
+<!--
+    <div class="bg-notice">
+      <div class="container pt-1 pb-1 statusbar-grid">
+        <div class="statusbar-message">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Quants jocs estan ambientats en la dècada de 2020? </font>
+            <font style="vertical-align: inherit;">( </font>
+          </font>
+          <a href="http://elservidor.cat/">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Resposta</font>
+            </font>
+          </a>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;"> )</font>
+          </font>
+        </div>
+      </div>
+    </div> 
+-->
+    
+    <main id="main">
+      <div class="flex flex-space-between">
+        <div class="mb">
+          <h1 class="mb-0">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Metroid </font>
+            </font>
+          </h1>           
+          <div class="text-sm text-normal text-muted">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;"></font>
+            </font>
+            <span class="text-nowrap-desktop">
+              <u>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;"></font>
+              </font>
+              </u>
+            </span>
+          </div>
+        </div> 
+        
+        <div class="flex flex-end">
+  
+            
+          </div><!----><!----><!----><!---->
+        </div>
+      </div>
+    </div> 
+    
+    
+    <div id="infoBlock" class="game-info mb">
+      <div class="info-box text-center">
+        <div>
+          <a href="http://elservidor.cat/" id="cover"><img src="mk_files/portada-de-metroid.webp" width="293" height="440" alt="tapa de caja" class="img-box"></a> <br> 
+        </div>
+      </div> 
+      
+      <div class="info-release">
+        <dl class="metadata">
+
+          <dt>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">LLançament</font>
+            </font>
+          </dt> 
+
+          <dd>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">6 de agosto de 1986 en</font>
+              </font>
+            <a href="https://es.wikipedia.org/wiki/Famicom_Disk_System">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Family Computer Disk System</font>
+              </font>
+            </a>
+          </dd> 
+          
+          <dt>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Crèdits</font>
+            </font>
+          </dt> 
+          
+          <dd>
+            <!--<a href="http://elservidor.cat/" class="link-contributor" rel="nofollow">-->
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">-</font>
+              </font>
+            </a>
+          </dd> 
+          
+          <dt>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">LLançaments per data </font>
+            </font>
+            <small class="text-muted text-normal hide-sm">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">(</font>
+              </font>
+              <!--<a href="http://elservidor.cat/">-->
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">per plataforma</font>
+                </font>
+              </a>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;"> )</font>
+              </font>
+            </small>
+          </dt> 
+          
+          <dd>
+            <ul id="platformLinks" class="list-group toggle-long-text mb-0">
+              <li>
+                <a id="twindows" aria-describedby="tooltip">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">1987 </font>
+                  </font>
+                </a> 
+                <span class="text-muted">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">(</font>
+                  </font>
+                  <a href="https://es.wikipedia.org/wiki/Nintendo_Entertainment_System">
+                    <font style="vertical-align: inherit;">
+                      <font style="vertical-align: inherit;">Nintendo Entertainment System</font>
+                    </font>
+                  </a>
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> )</font>
+                  </font>
+                </span>
+              </li>               
+              <li>
+                <a id="tnintendo-switch" aria-describedby="tooltip">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">1986</font>
+                  </font>
+                </a> 
+                <span class="text-muted">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">( </font>
+                  </font>
+                  <a href="https://es.wikipedia.org/wiki/Famicom_Disk_System">
+                    <font style="vertical-align: inherit;">
+                      <font style="vertical-align: inherit;">Family Computer Disk System</font>
+                    </font>
+                  </a>
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> ) </font>
+                  </font>
+                </span>
+              </li> 
+              <!--
+              <li>
+                <a id="tplaystation-5" aria-describedby="tooltip" href="https://es.wikipedia.org/wiki/Nintendo_Entertainment_System">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">1987</font>
+                  </font>
+                </a> <span class="text-muted">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">( </font>
+                  </font>
+                  <a href="http://elservidor.cat/">
+                    <font style="vertical-align: inherit;">
+                      <font style="vertical-align: inherit;">Nintendo Entertainment System</font>
+                    </font>
+                  </a>
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> ) </font>
+                  </font>
+                </span>
+              </li> 
+              <li>
+                <a id="txbox-series" aria-describedby="tooltip" href="http://elservidor.cat/">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">2023 </font>
+                  </font>
+                </a> 
+                <span class="text-muted">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> ( </font>
+                  </font>
+                  <a href="http://elservidor.cat/">
+                    <font style="vertical-align: inherit;">
+                      <font style="vertical-align: inherit;">Serie Xbox</font>
+                    </font>
+                  </a><font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> ) </font>
+                  </font>
+                </span>
+              </li>
+            -->
+          </ul> 
+          <a href="http://elservidor.cat/!" class="text-muted text-nowrap text-sm">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;"></font>
+            </font>
+          </a>
+        </dd> 
+      
+          <dt>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Editores</font>
+            </font>
+          </dt> 
+          
+          <dd>
+            <ul id="publisherLinks" class="list-group toggle-long-text mb-0" style="-webkit-line-clamp: 1000;">
+              <li>
+                <a href="https://es.wikipedia.org/wiki/Nintendo">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Nintendo</font>
+                  </font>
+                </a>
+              </li>
+            </ul><!---->
+          </dd> 
+          
+          <dt>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Desenvolupadors</font>
+            </font>
+          </dt> 
+          
+          <dd>
+            <ul id="developerLinks" class="list-group toggle-long-text mb-0" style="-webkit-line-clamp: 1000;">
+              <li>
+                <a href="https://es.wikipedia.org/wiki/Nintendo_Research_%26_Development_1">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Nintendo Research & Development</font>
+                  </font>
+                </a>
+              </li>
+            </ul> <!---->
+          </dd>
+        
+        </dl>
+      </div> 
+      
+      <div class="info-score">
+        
+        <dl class="metadata">
+          <dt>
+          <span>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Puntuació de <a href="https://www.3djuegos.com/juegos/analisis/lectores/13321/0/metroid/">3djuegos</a></font>
+            </font>
+          </span>
+          </dt> 
+            <dd>
+              <div class="mobyscore" style="background: rgb(0, 255, 0);">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">8,5</font>
+                </font>
+              </div> 
+              <small class="text-muted">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">#28.082 de 42K</font>
+                </font>
+              </small>
+            </dd> 
+            
+            <dt>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Crítics</font>
+              </font>
+            </dt> 
+            
+            <dd>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">40%</font>
+              </font>
+              <small class="text-muted">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">( </font>
+                </font>
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">29</font>
+                  </font>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;"> )</font>
+                </font>
+              </small>
+            </dd> 
+            
+            <dt>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Classificació</font>
+              </font>
+            </dt> 
+            
+            <dd>
+              <ul id="platformRankings" class="list-group toggle-long-text mb-0" style="-webkit-line-clamp: 1000;">
+                <li class="text-nowrap-desktop">
+                  <span>
+                    <font style="vertical-align: inherit;">
+                      <font style="vertical-align: inherit;">-</font>
+                    </font>
+                  </span>
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"></font>
+                  </font>
+                  <a href="http://elservidor.cat/">
+                    <font style="vertical-align: inherit;">
+                      <font style="vertical-align: inherit;"></font>
+                    </font>
+                  </a>
+                </li>
+              </ul>
+            </dd> 
+            
+            <dt>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Recollit per</font>
+              </font>
+            </dt> 
+            
+            <dd>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">1 jugador</font>
+              </font>
+            </dd>
+          </dl>
+        </div> 
+          
+          <div class="info-genres">
+            <dl class="metadata">
+
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Gènere</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <a href="https://es.wikipedia.org/wiki/Videojuego_de_acci%C3%B3n_y_aventura">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Acció</font>
+                  </font>
+                </a><br>
+              </dd> 
+              
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Perspectiva</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <a href="https://es.wikipedia.org/wiki/Videojuego_de_desplazamiento_lateral">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Vista lateral</font>
+                  </font>
+                </a><br>
+              </dd> 
+              
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Visual</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <!--<a href="http://elservidor.cat/">-->
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Desplaçament 2D</font>
+                  </font>
+                </a>
+                <br>
+              </dd> 
+              
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Com es Juga</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <a href="https://es.wikipedia.org/wiki/Videojuego_de_disparos">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tret</font>
+                  </font>
+                </a><br>
+              </dd> 
+              
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Interfície</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <!--<a href="http://elservidor.cat/">-->
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Control simple</font>
+                  </font>
+                </a><br>
+              </dd> 
+              
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Narratiu</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <!--<a href="http://elservidor.cat/">-->
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Exploració</font>
+                  </font>
+                </a><br>
+              </dd>
+            </dl>
+          </div> 
+          
+          <div class="info-specs">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;"></font>
+            </font>
+            <span class="text-normal text-nowrap">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;"></font>
+              </font>
+              <a href="http://elservidor.cat/">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;"></font>
+                </font>
+              </a>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;"></font>
+              </font>
+            </span>             
+            <hr> 
+
+            <dl class="metadata">
+
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Classificación PEGI</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <!--<a href="http://elservidor.cat/">-->
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">7+</font>
+                  </font>
+                </a>
+              </dd>
+
+            </dl> 
+            
+            <dl class="metadata">
+              
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Dispositius d'entrada compatibles</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <!--<a href="http://elservidor.cat/">-->
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Gamepad</font>
+                  </font>
+                </a>
+              </dd> 
+              
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Opcions multijugador</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <!--<a href="http://elservidor.cat/">-->
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">-</font>
+                  </font>
+                </a>
+              
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Número de jugadors sense conexió</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <!--<a href="http://elservidor.cat/">-->
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">1 jugador</font>
+                  </font>
+                </a>
+              </dd>                           
+
+            <dl class="metadata">              
+              <dt>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Lloc oficial</font>
+                </font>
+              </dt> 
+              
+              <dd>
+                <a href="https://www.nintendo.es/Juegos/NES/Metroid--275726.html" rel="nofollow" class="link-external">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Visita</font>
+                  </font>
+                </a>
+              </dd>
+            </dl>
+
+          </div>
+        </div> 
+        <div></div>  
+        
+        <hr><br>
+
+        <section id="gameOfficialDescription">
+          <h2>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;"> Descripció oficial </font>
+            </font>
+          </h2> 
+          <div id="description-text" class="shrink-headings toggle-long-text" style="-webkit-line-clamp: 1000;">
+            <p>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">"Metroid" de 1986, els jugadors assumeixen el paper de Samus Aran, una cazarrecompensas galàctica.
+                  La seva missió és infiltrar-se al planeta Zebes i detenir els Pirates Espacials, que han segrestat uns éssers alienígenes coneguts com Metroid per usar-los amb fins malèvols.
+                  Samus ha d'explorar les profunditats del planeta, enfrontar-se a enemics alienígenes i adquirir millores per al seu vestit espacial mentre s'obre pas cap al cau de Mother Brain,
+                  la ment mestra darrere dels Pirates Espacials.</font>
+              </font>
+              <br> 
+            </p> 
+            <p>
+              <cite>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;"></font>
+                </font>
+              </cite>
+            </p>
+          </div> <!---->
+        </section> 
+        
+        <h2>
+          <a href="http://elservidor.cat/">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">Promocions</font>
+            </font>
+          </a> 
+        </h2> 
+        <div id="gamePromoImages" class="img-holder mb">
+          <img loading="lazy" src="./mk_files/gif-metroid1.gif" class="img-thumbnail" width="600" height="338" alt="imagen promocional">
+          <img loading="lazy" src="./mk_files/img-metroidfoto1.webp" class="img-thumbnail" width="600" height="338" alt="imagen promocional"> 
+          <img loading="lazy" src="./mk_files/img-metroidfoto2.png" class="img-thumbnail" width="600" height="338" alt="imagen promocional">
+          <img loading="lazy" src="./mk_files/img-metroidfoto3.jpg" class="img-thumbnail" width="600" height="338" alt="imagen promocional">
+          <img loading="lazy" src="./mk_files/img-metroidfoto4.png" class="img-thumbnail" width="600" height="338" alt="imagen promocional">
+        </div> 
+        
+        
+        
+        <section id="gameVideos">
+          <h2>
+            <a href="http://elservidor.cat/">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Vídeos</font>
+              </font>
+            </a>
+          </h2> 
+          <div class="grid-overview-videos mb-0">
+            <a href="https://youtu.be/BEgpO595Z1s?si=ImPIzxIJjOTMco_p"><img loading="lazy" src="./mk_files/img-metroidportada1.webp" class="img-thumbnail" width="1200" height="720" alt="imagen promocional" ></a> 
+            <a href="https://www.youtube.com/watch?v=vY7CgzISBJk"><img loading="lazy" src="./mk_files/img-metroidportada2.png" class="img-thumbnail" width="1200" height="720" alt="imagen promocional" ></a> 
+            <a href="https://youtu.be/jTyFeNzCVBA?si=TS6LiYsz9CDxiv8i"><img loading="lazy" src="./mk_files/img-metroidevolucion.jpg" class="img-thumbnail" width="1200" height="720" alt="imagen promocional" ></a> 
+
+        </div>
+      </section> 
+      
+      <section id="relatedGames">
+        <h2>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Jocs relacionats</font>
+          </font>
+        </h2> 
+        <div class="grid-split">
+          <div class="flex">
+            <div class="me-sm" aria-hidden="true">
+              <a href="https://es.wikipedia.org/wiki/Metroid_Dread" rel="nofollow" tabindex="-1"><img loading="lazy" src="./mk_files/img-metroiddread.jpg" width="240" height="112" alt="tapa de caja" class="img-thumbnail-box"></a>
+            </div> 
+            <div class="text-ellipsis">
+              <b>
+                <a href="https://es.wikipedia.org/wiki/Metroid_Dread" rel="nofollow">Metroid&nbsp;Dread</a>
+              </b> 
+              <br> 
+              <small class="text-muted"> 
+                Released
+                    2021 on
+                  Nintendo Switch
+              </small>
+            </div>
+          </div> 
+          <div class="flex">
+            <div class="me-sm" aria-hidden="true">
+              <a href="https://en.wikipedia.org/wiki/Metroid:_Samus_Returns" rel="nofollow" tabindex="-1"><img loading="lazy" src="./mk_files/Metroid_Samus_Returns.jpg" width="136" height="136" alt="tapa de caja" class="img-thumbnail-box"></a>
+            </div> 
+            <div class="text-ellipsis">
+              <b>
+                <a href="https://en.wikipedia.org/wiki/Metroid:_Samus_Returns" rel="nofollow">Metroid: Samus Returns</a>
+              </b> 
+              <br> 
+              <small class="text-muted">
+                Released
+                    2017 on
+                  Nintendo 3DS
+              </small>
+            </div>
+          </div> 
+          <div class="flex">
+            <div class="me-sm" aria-hidden="true">
+              <a href="https://es.wikipedia.org/wiki/Metroid_Prime:_Federation_Force" rel="nofollow" tabindex="-1"><img loading="lazy" src="./mk_files/metroidfederation.jpg" width="115" height="136" alt="tapa de caja" class="img-thumbnail-box"></a>
+            </div> 
+            <div class="text-ellipsis">
+              <b>
+                <a href="https://es.wikipedia.org/wiki/Metroid_Prime:_Federation_Force" rel="nofollow">Metroid Prime: Federation Force</a>
+              </b> 
+              <br> 
+              <small class="text-muted">
+                Released
+                    2016 on
+                  Nintendo 3DS
+              </small>
+            </div>
+          </div> 
+          <div class="flex">
+            <div class="me-sm" aria-hidden="true">
+              <a href="https://es.wikipedia.org/wiki/Metroid:_Other_M" rel="nofollow" tabindex="-1"><img loading="lazy" src="./mk_files/metroidotherm.jpg" width="136" height="136" alt="tapa de caja" class="img-thumbnail-box"></a></div> <div class="text-ellipsis"><b><a href="https://es.wikipedia.org/wiki/Metroid:_Other_M" rel="nofollow">Metroid: Other M</a></b> <br> <small class="text-muted">
+                Released
+                    2010 on
+                  WII
+              </small>
+            </div>
+          </div> 
+          <div class="flex">
+            <div class="me-sm" aria-hidden="true">
+              <a href="https://es.wikipedia.org/wiki/Metroid_Prime_Trilogy" rel="nofollow" tabindex="-1"><img loading="lazy" src="./mk_files/metroidprimertriology.jpg" width="96" height="136" alt="tapa de caja" class="img-thumbnail-box"></a></div> <div class="text-ellipsis"><b><a href="https://es.wikipedia.org/wiki/Metroid_Prime_Trilogy" rel="nofollow">Metroid Prime Trilogy</a></b> <br> <small class="text-muted">
+                Released
+                    2009 on
+                  WII
+              </small>
+            </div>
+          </div> 
+          <div class="flex">
+            <div class="me-sm" aria-hidden="true">
+              <a href="https://es.wikipedia.org/wiki/Metroid_Prime_3:_Corruption" rel="nofollow" tabindex="-1"><img loading="lazy" src="./mk_files/metroidprime3corruption.png" width="107" height="136" alt="tapa de caja" class="img-thumbnail-box"></a></div> <div class="text-ellipsis"><b><a href="https://es.wikipedia.org/wiki/Metroid_Prime_3:_Corruption" rel="nofollow">Metroid Prime 3: Corruption</a></b> <br> <small class="text-muted">
+                Released
+                    2007 on
+                  WII
+              </small>
+            </div>
+          </div> 
+        </div>
+      </section> 
+           
+      <section>
+        <h2>Patrocinadors d'aquesta entrada</h2> 
+        <p>Joc afegit per Ismael Iván A. B.</p> 
+      </section>
+    </main> 
+    
+  </div>
+</div>
+</div>
+        
+</body>
+
+</html>

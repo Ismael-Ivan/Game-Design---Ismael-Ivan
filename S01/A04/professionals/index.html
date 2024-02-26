@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professionals - Ismael Iván</title>
+  <style>
+    ::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6d72c3; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1a1e2b; /* Color del fondo de la barra de desplazamiento */
+}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0c0f17;
+      color: #e3e3e3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      min-height: 100vh; 
+    }
+
+    header {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      margin-top: 39px; 
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #6d72c3;
+    }
+
+    #top-menu {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #top-menu a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    #top-menu a:hover {
+      color: #9fa4e9;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #9fa4e9;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 120px;
+    }
+
+    .sidebar {
+      background: #282c3f;
+      color: #ffffff;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: width 0.3s;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar:hover {
+      width: 300px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #6d72c3;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #e3e3e3;
+      display: block;
+      padding: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #454d6a;
+    }
+
+    .content {
+      padding: 20px;
+      flex-grow: 1;
+      background: #1a1e2b;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      margin-bottom: 60px; 
+      transition: margin-bottom 0.3s ease; 
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #6d72c3;
+    }
+
+    p {
+      text-align: justify;
+      color: #e3e3e3;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 500px;
+      height: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+/* ------------------------ */
+    audio {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #2b2f3e;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    audio::-webkit-media-controls {
+      background-color: #1a1e2b;
+      border-radius: 5px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-pause-button,
+    audio::-webkit-media-controls-mute-button {
+      background-color: #6d72c3;
+      border-radius: 50%;
+    }
+
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    color: #6d72c3;
+  }
+
+/* Estilos para la barra de desplazamiento en WebKit (Chrome, Safari) */
+  audio::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  audio::-webkit-scrollbar-thumb {
+    background-color: #6d72c3;
+    border-radius: 6px;
+  }
+
+  audio::-webkit-scrollbar-track {
+    background-color: #2b2f3e;
+  }
+/* ----------------- */
+  video {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #2b2f3e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+    footer {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0 auto; /* Centra horizontalmente el texto */
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="top-menu">
+    <a href="../../indexS01/index.html">Menú</a>
+    <a href="../../A01/videojoc1/index.html">Videojoc (Metroid)</a>
+    <a href="../../A01/videojoc2/index.html">Videojoc (Pac-Man)</a>
+    <a href="../../A02/modelsdenegoci/index.html">Models de negoci</a>
+    <a href="../../A03/generesdevideojocs/index.html">Gèneres de videojocs</a>
+    <a href="#">Professionals</a>
+    <a href="../../A05/fases-i-tasques/index.html">Fases i tasques</a>
+    <a href="../../A06/modelmda-elements/index.html">Model MDA i Elements</a>
+    <a href="../../A06/tipusdejugadors/index.html">Tipus de jugadors</a>
+  </div>
+
+  <header>
+    <h1>PROFESSIONALS</h1>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Índex</h2>
+      <ul>
+        <li><a href="#artista-entorn">Artista de l'Entorn</a></li>
+        <li><a href="#animador">Animador</a></li>
+        <li><a href="#dissenyador-so">Dissenyador de So</a></li>
+        <li><a href="#enginyer-audio">Enginyer d'Àudio</a></li>
+        <li><a href="#compositor">Compositor</a></li>
+        <li><a href="#artista-fx">Artista FX</a></li>
+        <li><a href="#escriptor">Escriptor</a></li>
+        <li><a href="#legal">Legal</a></li>
+        <li><a href="#artista-personatge">Artista del Personatge</a></li>
+        <li><a href="#programador-jugabilitat">Programador de Jugabilitat</a></li>
+        <li><a href="#programador-ia">Programador d'IA</a></li>
+        <li><a href="#programador-xarxa">Programador de Xarxa</a></li>
+        <li><a href="#enginyer-llancament">Enginyer de Llançament</a></li>
+        <li><a href="#programador-motor">Programador del Motor Principal</a></li>
+        <li><a href="#programador-eines">Programador d'Eines</a></li>
+        <li><a href="#dissenyador-nivell">Dissenyador de Nivell</a></li>
+        <li><a href="#dissenyador-iu">Dissenyador d'IU</a></li>
+        <li><a href="#dissenyador-combat">Dissenyador de Combat</a></li>
+        <li><a href="#dissenyador-sistemes">Dissenyador de Sistemes</a></li>
+        <li><a href="#dissenyador-monetitzacio">Dissenyador de Monetització</a></li>
+        <li><a href="#qa-tester">QA Tester</a></li>
+        <li><a href="#ux-investigador">UX / Investigador d'Usabilitat</a></li>
+        <li><a href="#localitzacio">Localització</a></li>
+        <li><a href="#productor">Productor</a></li>
+        <li><a href="#editor">Editor</a></li>
+        <li><a href="#ceo">CEO</a></li>
+        <li><a href="#relacions-publiques">Relacions Publiques</a></li>
+        <li><a href="#community-manager">Community Manager</a></li>
+        <li><a href="#atencio-client">Atenció al Client</a></li>
+        <li><a href="#jugador">Jugador</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Creació d'un Videojoc</h1>
+      <h2 id="artista-entorn">Artista de l'Entorn</h2>
+      <p>L'artista de l'entorn és responsable de crear els entorns i els escenaris del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que els entorns siguin visualsment atractius i funcionals.</p>
+      <img src="images/artista-entorn.jpg" alt="Artista de l'Entorn">
+
+      <h2 id="animador">Animador</h2>
+      <p>L'animador és responsable de crear les animacions dels personatges i els objectes del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que les animacions siguin suaus i realistes.</p>
+      <img src="images/animador2.gif" alt="Animador">
+
+      <h2 id="dissenyador-so">Dissenyador de So</h2>
+      <p>El dissenyador de so és responsable de crear els efectes de so i la música del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el so sigui immersiu i emocionant.</p>
+      <audio controls>
+        <source src="images/sonidohongo.mp3" type="audio/mp3" alt="Dissenyador de so">
+      </audio>
+
+      <h2 id="enginyer-audio">Enginyer d'Àudio</h2>
+      <p>L'enginyer d'àudio és responsable de programar i implementar els efectes de so i la música del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el so sigui de alta qualitat i funcional.</p>
+
+      <h2 id="compositor">Compositor</h2>
+      <p>El compositor és responsable de crear la música original del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que la música sigui emotiva i s'ajusti al joc.</p>
+      <video controls width="480" height="270">
+        <source src="images/gameplay-mariobros.mp4" type="video/mp4" alt="Enginyer d'Audio i Compositor">
+      </video>
+
+      <h2 id="artista-fx">Artista FX</h2>
+      <p>L'artista FX és responsable de crear els efectes visuals especials del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que els efectes visuals siguin impressionants i funcionals.</p>
+      <img src="images/artistafx.gif" alt="Artista FX">
+
+      <h2 id="escriptor">Escriptor</h2>
+      <p>L'escriptor és responsable de crear la història i el diàleg del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que la història sigui interessant i coherent.</p>
+      <img src="images/escriptor.png" alt="Escriptor">
+
+      <h2 id="legal">Legal</h2>
+      <p>El departament legal és responsable de gestionar els aspectes legals del desenvolupament del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el joc compleixi amb les lleis i regulacions aplicables.</p>
+      <img src="images/legal.png" alt="Legal">
+
+      <h2 id="artista-personatge">Artista del Personatge</h2>
+      <p>L'artista del personatge és responsable de crear els personatges del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que els personatges siguin visualsment atractius i funcionals.</p>
+      <img src="images/artista-de-personatges.png" alt="Artista del Personatge">
+
+      <h2 id="programador-jugabilitat">Programador de Jugabilitat</h2>
+      <p>El programador de jugabilitat és responsable de programar la jugabilitat i la mecànica del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el joc sigui divertit i engrescador.</p>
+      <img src="images/jugabilitat.jpg" alt="Programador de Jugabilitat">
+
+      <h2 id="programador-ia">Programador d'IA</h2>
+      <p>El programador d'IA és responsable de programar la intel·ligència artificial dels personatges del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que els personatges siguin intel·ligents i reaccionin de manera realista.</p>
+
+      <h2 id="programador-xarxa">Programador de Xarxa</h2>
+      <p>El programador de xarxa és responsable de programar la funcionalitat multijugador del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el joc tingui una connexió estable i segura.</p>
+
+      <h2 id="enginyer-llancament">Enginyer de Llançament</h2>
+      <p>L'enginyer de llançament és responsable de programar i implementar el llançament del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el llançament sigui exitós i sense problemes.</p>
+
+      <h2 id="programador-motor">Programador del Motor Principal</h2>
+      <p>El programador del motor principal és responsable de programar i implementar el motor principal del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el motor sigui estable i eficient.</p>
+
+      <h2 id="programador-eines">Programador d'Eines</h2>
+      <p>El programador d'eines és responsable de programar i implementar les eines de desenvolupament del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que les eines siguin fàcils d'utilitzar i eficients.</p>
+
+      <h2 id="dissenyador-nivell">Dissenyador de Nivell</h2>
+      <p>El dissenyador de nivell és responsable de crear els nivells i les missions del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que els nivells siguin desafiant i divertits.</p>
+      <img src="images/nivells.webp" alt="Dissenyador de Nivell">
+
+      <h2 id="dissenyador-iu">Dissenyador d'IU</h2>
+      <p>El dissenyador d'IU és responsable de crear la interfície d'usuari del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que la interfície sigui intuïtiva i fàcil d'utilitzar.</p>
+      <img src="images/iu-juegos.avif" alt="Dissenyador d'IU">
+
+      <h2 id="dissenyador-combat">Dissenyador de Combat</h2>
+      <p>El dissenyador de combat és responsable de crear el sistema de combat del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el combat sigui emocionant i equilibrat.</p>
+      <img src="images/combat-juegos.png" alt="Dissenyador de Combat">
+
+      <h2 id="dissenyador-sistemes">Dissenyador de Sistemes</h2>
+      <p>El dissenyador de sistemes és responsable de crear els sistemes de joc del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que els sistemes siguin interessants i variats.</p>
+
+      <h2 id="dissenyador-monetitzacio">Dissenyador de Monetització</h2>
+      <p>El dissenyador de monetització és responsable de crear el sistema de monetització del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el joc sigui rendible i ètic.</p>
+      <img src="images/monetitzacio.png" alt="Dissenyador de Monetització">
+
+      <h2 id="qa-tester">QA Tester</h2>
+      <p>El QA tester és responsable de provar i debugar el videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el joc sigui lliure d'errors i funcioni correctament.</p>
+      <img src="images/tester.jpg" alt="qa-test">
+
+      <h2 id="ux-investigador">UX / Investigador d'Usabilitat</h2>
+      <p>L'UX / investigador d'usabilitat és responsable de garantir que el videojoc sigui fàcil d'utilitzar i que proporcioni una bona experiència a l'usuari. Treballa estretament amb altres membres de l'equip per assegurar-se que el joc sigui intuïtiu i satisfactori.</p>
+
+      <h2 id="localitzacio">Localització</h2>
+      <p>El departament de localització és responsable de traduir el videojoc a altres idiomes i adaptar-lo a altres cultures. Treballa estretament amb altres membres de l'equip per assegurar-se que el joc sigui accessible i comprensible per a una àmplia audiència.</p>
+      <img src="images/localitzacio.png" alt="Localització">
+
+      <h2 id="productor">Productor</h2>
+      <p>El productor és responsable de supervisar i dirigir el procés de desenvolupament del videojoc. Coordina l'equip i s'assegura que el joc es compleixi en el termini i dins del pressupost establerts.</p>
+
+      <h2 id="editor">Editor</h2>
+      <p>L'editor és responsable de revisar i millorar el contingut del videojoc. Treballa estretament amb altres membres de l'equip per assegurar-se que el joc tingui una història interessant i coherent.</p>
+      <img src="images/editor.jpg" alt="Editor">
+
+      <h2 id="ceo">CEO</h2>
+      <p>El CEO és el cap de l'empresa de videojocs. És responsable de prendre decisions estratègiques i assegurar-se que l'empresa sigui rendible i competitiva.</p>
+      <img src="images/marques-de-ceo.webp" alt="CEO">
+
+      <h2 id="relacions-publiques">Relacions Publiques</h2>
+      <p>El departament de relacions públiques és responsable de gestionar la imatge i la reputació de l'empresa de videojocs. Treballa estretament amb altres membres de l'equip per assegurar-se que l'empresa tingui una bona relació amb els mitjans i el públic.</p>
+      <img src="images/relacions-empreses.png" alt="Relacions Publiques">
+
+      <h2 id="community-manager">Community Manager</h2>
+      <p>El community manager és responsable de gestionar la comunitat de jugadors de l'empresa de videojocs. Treballa estretament amb altres membres de l'equip per assegurar-se que la comunitat sigui activa i compromesa.</p>
+      <img src="images/community-manager.jpg" alt="Community Manager">
+
+      <h2 id="atencio-client">Atenció al Client</h2>
+      <p>El departament d'atenció al client és responsable de gestionar les consultes i les queixes dels jugadors. Treballa estretament amb altres membres de l'equip per assegurar-se que els jugadors estiguin satisfets i ben atesos.</p>
+      <img src="images/atencionalcliente.jpg" alt="Atenció al Client">
+
+      <h2 id="jugador">Jugador</h2>
+      <p>El jugador és la raó de ser de tota l'indústria dels videojocs. Sense jugadors, no hi hauria videojocs. Els jugadors són la raó per la qual tots aquests professionals treballen tan durament per crear grans experiències de joc.</p>
+      <img src="images/jugadors.jpg" alt="Jugador">
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 - 2024 Ismael Iván A. B.</p>
+  </footer>
+</body>
+</html>

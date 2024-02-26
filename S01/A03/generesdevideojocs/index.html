@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gèneres de videojocs - Ismael Iván</title>
+  <style>
+    ::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6d72c3; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1a1e2b; /* Color del fondo de la barra de desplazamiento */
+}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0c0f17;
+      color: #e3e3e3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      min-height: 100vh; 
+    }
+
+    header {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      margin-top: 39px; 
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #6d72c3;
+    }
+
+    #top-menu {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #top-menu a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    #top-menu a:hover {
+      color: #9fa4e9;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #9fa4e9;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 120px;
+    }
+
+    .sidebar {
+      background: #282c3f;
+      color: #ffffff;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: width 0.3s;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar:hover {
+      width: 300px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #6d72c3;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #e3e3e3;
+      display: block;
+      padding: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #454d6a;
+    }
+
+    .content {
+      padding: 20px;
+      flex-grow: 1;
+      background: #1a1e2b;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      margin-bottom: 60px; 
+      transition: margin-bottom 0.3s ease; 
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #6d72c3;
+    }
+
+    p {
+      text-align: justify;
+      color: #e3e3e3;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 500px;
+      height: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+/* ------------------------ */
+    audio {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #2b2f3e;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    audio::-webkit-media-controls {
+      background-color: #1a1e2b;
+      border-radius: 5px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-pause-button,
+    audio::-webkit-media-controls-mute-button {
+      background-color: #6d72c3;
+      border-radius: 50%;
+    }
+
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    color: #6d72c3;
+  }
+
+/* Estilos para la barra de desplazamiento en WebKit (Chrome, Safari) */
+  audio::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  audio::-webkit-scrollbar-thumb {
+    background-color: #6d72c3;
+    border-radius: 6px;
+  }
+
+  audio::-webkit-scrollbar-track {
+    background-color: #2b2f3e;
+  }
+/* ----------------- */
+  video {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #2b2f3e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+    footer {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0 auto; /* Centra horizontalmente el texto */
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="top-menu">
+    <a href="../../indexS01/index.html">Menú</a>
+    <a href="../../A01/videojoc1/index.html">Videojoc (Metroid)</a>
+    <a href="../../A01/videojoc2/index.html">Videojoc (Pac-Man)</a>
+    <a href="../../A02/modelsdenegoci/index.html">Models de negoci</a>
+    <a href="#">Gèneres de videojocs</a>
+    <a href="../../A04/professionals/index.html">Professionals</a>
+    <a href="../../A05/fases-i-tasques/index.html">Fases i tasques</a>
+    <a href="../../A06/modelmda-elements/index.html">Model MDA i Elements</a>
+    <a href="../../A06/tipusdejugadors/index.html">Tipus de jugadors</a>
+  </div>
+
+  <header>
+    <h1>GÈNERES DE VIDEOJOCS</h1>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Índex</h2>
+      <ul>
+        <li><a href="#accio">Acció</a></li>
+        <li><a href="#aventura">Aventura</a></li>
+        <li><a href="#plataformes">Plataformes</a></li>
+        <li><a href="#trets">Trets</a></li>
+        <li><a href="#estrategia">Estratègia</a></li>
+        <li><a href="#rol">Rol</a></li>
+        <li><a href="#simulacio">Simulació</a></li>
+        <li><a href="#esports">Esports</a></li>
+        <li><a href="#puzzle">Puzzle</a></li>
+        <li><a href="#horror">Horror</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Gèneres de Videojocs</h1>
+  
+      <h2 id="accio">Acció</h2>
+      <p>Aquest gènere posa èmfasi en les reaccions ràpides i els reflexos del jugador. Sol incloure combat, persecucions i altres situacions d'alta intensitat. Exemples de jocs d'acció són Call of Duty, Halo i Assassin's Creed.</p>
+      <img src="images/accio.jpg" alt="Acció">
+    
+      <h2 id="aventura">Aventura</h2>
+      <p>El gènere d'aventura sol incloure exploració, resolució de puzles i una trama immersiva. El jugador pot viure emocionants històries i descobrir nous mons. Exemples de jocs d'aventura són The Legend of Zelda, Uncharted i Tomb Raider.</p>
+      <img src="images/aventura.jpg" alt="Aventura">
+    
+      <h2 id="plataformes">Plataformes</h2>
+      <p>Els jocs de plataformes posen èmfasi en la navegació d'un personatge a través de nivells en els quals ha de saltar entre plataformes i evitar obstacles. Exemples de jocs de plataformes són Super Mario, Sonic the Hedgehog i Celeste.</p>
+      <img src="images/plataformes.jpg" alt="Plataformes">
+    
+      <h2 id="trets">Trets</h2>
+      <p>En aquest gènere, l'enfocament principal és disparar als enemics. Sol incloure armes de foc i altres elements relacionats amb la guerra. Exemples de jocs de disparos són Call of Duty, Counter-Strike i Overwatch.</p>
+      <img src="images/disparos.png" alt="Disparos">
+    
+      <h2 id="estrategia">Estratègia</h2>
+      <p>El gènere d'estratègia requereix pensament tàctic i presa de decisions. El jugador sol gestionar recursos i planificar estratègies per aconseguir la victòria. Exemples de jocs d'estratègia són Starcraft, Civilization i Age of Empires.</p>
+      <img src="images/estrategia.avif" alt="Estratègia">
+    
+      <h2 id="rol">Rol</h2>
+      <p>En aquest gènere, el jugador interpreta el paper d'un personatge i viu una història. Sol incloure elements de personalització del personatge i progressió en un món fictici. Exemples de jocs de rol són Final Fantasy, The Elder Scrolls i World of Warcraft.</p>
+      <img src="images/rol.webp" alt="Rol">
+    
+      <h2 id="simulacio">Simulació</h2>
+      <p>El gènere de simulació intenta simular aspectes de la vida real. El jugador pot gestionar ciutats, construir parcs d'atraccions o pilotar vehicles en entorns realistes. Exemples de jocs de simulació són The Sims, SimCity i Microsoft Flight Simulator.</p>
+      <img src="images/simulacio.png" alt="Simulació">
+    
+      <h2 id="esports">Esports</h2>
+      <p>Els jocs d'esports estan basats en esdeveniments esportius reals o ficticis. El jugador pot competir en diferents disciplines esportives com el futbol, el bàsquet o les carreres de cotxes. Exemples de jocs d'esports són FIFA, NBA 2K i Rocket League.</p>
+      <img src="images/esports.jpg" alt="Esports">
+    
+      <h2 id="puzzle">Puzzle</h2>
+      <p>El gènere de puzles requereix resoldre puzles o enigmes mitjançant la lògica i el pensament crític. El jugador pot trobar-se en situacions que posen a prova la seva capacitat de resolució de problemes. Exemples de jocs de puzles són Tetris, Portal i The Witness.</p>
+      <img src="images/puzzles.png" alt="Puzzle">
+    
+      <h2 id="horror">Horror</h2>
+      <p>Els jocs d'horror estan dissenyats per crear por i angoixa al jugador. Sol incloure elements de terror, supervivència i misteri. Exemples de jocs d'horror són Resident Evil, Silent Hill i Outlast.</p>
+      <img src="images/horror.jpg" alt="Horror">
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 - 2024 Ismael Iván A. B.</p>
+  </footer>
+</body>
+</html>

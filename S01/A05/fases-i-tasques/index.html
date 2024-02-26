@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fases i Tasques - Ismael Iván</title>
+  <style>
+    ::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6d72c3; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1a1e2b; /* Color del fondo de la barra de desplazamiento */
+}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0c0f17;
+      color: #e3e3e3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      min-height: 100vh; 
+    }
+
+    header {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      margin-top: 39px; 
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #6d72c3;
+    }
+
+    #top-menu {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #top-menu a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    #top-menu a:hover {
+      color: #9fa4e9;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #9fa4e9;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 120px;
+    }
+
+    .sidebar {
+      background: #282c3f;
+      color: #ffffff;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: width 0.3s;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar:hover {
+      width: 300px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #6d72c3;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #e3e3e3;
+      display: block;
+      padding: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #454d6a;
+    }
+
+    .content {
+      padding: 20px;
+      flex-grow: 1;
+      background: #1a1e2b;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      margin-bottom: 60px; 
+      transition: margin-bottom 0.3s ease; 
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #6d72c3;
+    }
+
+    p {
+      text-align: justify;
+      color: #e3e3e3;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 500px;
+      height: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    footer {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0 auto; /* Centra horizontalmente el texto */
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="top-menu">
+    <a href="../../indexS01/index.html">Menú</a>
+    <a href="../../A01/videojoc1/index.html">Videojoc (Metroid)</a>
+    <a href="../../A01/videojoc2/index.html">Videojoc (Pac-Man)</a>
+    <a href="../../A02/modelsdenegoci/index.html">Models de negoci</a>
+    <a href="../../A03/generesdevideojocs/index.html">Gèneres de videojocs</a>
+    <a href="../../A04/professionals/index.html">Professionals</a>
+    <a href="#">Fases i tasques</a>
+    <a href="../../A06/modelmda-elements/index.html">Model MDA i Elements</a>
+    <a href="../../A06/tipusdejugadors/index.html">Tipus de jugadors</a>
+  </div>
+
+  <header>
+    <h1>FASES I TASQUES</h1>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Índex</h2>
+      <ul>
+        <li><a href="#pre-produccio">Pre-producció</a></li>
+        <li><a href="#produccio">Producció</a></li>
+        <li><a href="#grans-esdeveniments">Grans esdeveniments</a></li>
+        <li><a href="#a-punt-dacabar">A punt d'acabar</a></li>
+        <li><a href="#testeig">Testeig o proves de funcionament</a></li>
+        <li><a href="#acabament">Acabament</a></li>
+        <li><a href="#manteniment">Manteniment</a></li>
+        <li><a href="#cultura">Cultura</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Creació d'un Videojoc</h1>
+      <p>La creació d'un videojoc passa per diverses fases i tasques que s'han de dur a terme de manera ordenada i coordinada. A continuació es detallen les principals fases i tasques en el desenvolupament d'un videojoc:</p>
+
+      <img src="images/fases-i-tasques.png" alt="fases-i-tasques">
+
+      <h2 id="pre-produccio">Pre-producció</h2>
+      <p>En aquesta fase es defineix la idea del videojoc, es realitza un estudi de mercat, es redacta el guió i es crea un pla de producció.</p>
+      <img src="images/pre-produccion.jpg" alt="Pre-producció">
+
+      <h2 id="produccio">Producció</h2>
+      <p>En aquesta fase es desenvolupa el videojoc, es creen els diferents elements com ara els personatges, els escenaris i la música, i es programen les mecàniques de joc.</p>
+      <img src="images/produccio.png" alt="Producció">
+
+      <h2 id="grans-esdeveniments">Grans esdeveniments</h2>
+      <p>En aquesta fase es realitzen els grans esdeveniments com ara la presentació del videojoc i les campanyes de màrqueting.</p>
+      <img src="images/campaña.jpg" alt="Grans esdeveniments">
+
+      <h2 id="a-punt-dacabar">A punt d'acabar</h2>
+      <p>En aquesta fase es realitzen les últimes correccions i millores abans del llançament del videojoc.</p>
+
+      <h2 id="testeig">Testeig o proves de funcionament</h2>
+      <p>En aquesta fase es realitzen les proves de funcionament per assegurar-se que el videojoc funciona correctament.</p>
+      <img src="images/tester.jpg" alt="Testeig o proves de funcionament">
+
+      <h2 id="acabament">Acabament</h2>
+      <p>En aquesta fase es realitzen les últimes millores i es prepara el videojoc per al llançament.</p>
+
+      <h2 id="manteniment">Manteniment</h2>
+      <p>En aquesta fase es realitza el manteniment del videojoc, es corregeixen els errors i es realitzen les actualitzacions.</p>
+      <img src="images/manteniment.png" alt="Manteniment">
+
+      <h2 id="cultura">Cultura</h2>
+      <p>En aquesta fase es realitza la promoció del videojoc i es crea una comunitat entorn del videojoc.</p>
+      <img src="images/comunitat.webp" alt="Cultura">
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 - 2024 Ismael Iván A. B.</p>
+  </footer>
+</body>
+</html>

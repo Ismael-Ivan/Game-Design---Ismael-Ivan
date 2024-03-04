@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model MDA i Elements d'un Videojoc - Ismael Iván</title>
+  <style>
+    ::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6d72c3; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1a1e2b; /* Color del fondo de la barra de desplazamiento */
+}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0c0f17;
+      color: #e3e3e3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      min-height: 100vh; 
+    }
+
+    header {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      margin-top: 39px; 
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #6d72c3;
+    }
+
+    #top-menu {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #top-menu a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    #top-menu a:hover {
+      color: #9fa4e9;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #9fa4e9;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 120px;
+    }
+
+    .sidebar {
+      background: #282c3f;
+      color: #ffffff;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: width 0.3s;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar:hover {
+      width: 300px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #6d72c3;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #e3e3e3;
+      display: block;
+      padding: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #454d6a;
+    }
+
+    .content {
+      padding: 20px;
+      flex-grow: 1;
+      background: #1a1e2b;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      margin-bottom: 60px; 
+      transition: margin-bottom 0.3s ease; 
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #6d72c3;
+    }
+
+    p {
+      text-align: justify;
+      color: #e3e3e3;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 500px;
+      height: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+/* ------------------------ */
+    audio {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #2b2f3e;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    audio::-webkit-media-controls {
+      background-color: #1a1e2b;
+      border-radius: 5px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-pause-button,
+    audio::-webkit-media-controls-mute-button {
+      background-color: #6d72c3;
+      border-radius: 50%;
+    }
+
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    color: #6d72c3;
+  }
+
+/* Estilos para la barra de desplazamiento en WebKit (Chrome, Safari) */
+  audio::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  audio::-webkit-scrollbar-thumb {
+    background-color: #6d72c3;
+    border-radius: 6px;
+  }
+
+  audio::-webkit-scrollbar-track {
+    background-color: #2b2f3e;
+  }
+/* ----------------- */
+  video {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #2b2f3e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+    footer {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0 auto; 
+      text-align: center;
+    }
+
+    #categoria {
+      background-color: #0c0f17;
+    }
+  </style>
+</head>
+<body>
+  <div id="top-menu">
+    <a href="../../indexS01/index.html">Menú</a>
+    <a href="../../A01/videojoc1/index.html">Videojoc (Metroid)</a>
+    <a href="../../A01/videojoc2/index.html">Videojoc (Pac-Man)</a>
+    <a href="../../A02/modelsdenegoci/index.html">Models de negoci</a>
+    <a href="../../A03/generesdevideojocs/index.html">Gèneres de videojocs</a>
+    <a href="../../A04/professionals/index.html">Professionals</a>
+    <a href="../../A05/fases-i-tasques/index.html">Fases i tasques</a>
+    <a href="#">Model MDA i Elements</a>
+    <a href="../../A06/tipusdejugadors/index.html">Tipus de jugadors</a>
+  </div>
+  <header>
+    <h1>MODEL MDA I ELEMENTS D'UN VIDEOJOC</h1>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Índex</h2>
+      <ul>
+        <li><a id="categoria" href="#mda">Model MDA</a></li>
+        <li><a href="#mecanica">Mecànica</a></li>
+        <li><a href="#dinamica">Dinàmica</a></li>
+        <li><a href="#estetica">Estètica</a></li>
+        <li><a id="categoria" href="#elements">Elements de Videojoc</a></li>
+        <li><a href="#abstraccio">Abstracció de Conceptes i Realitat</a></li>
+        <li><a href="#conflicte">Conflicte, Competició o Cooperació</a></li>
+        <li><a href="#corba">Corba d'Interès</a></li>
+        <li><a href="#viatge">El Viatge de l'Heroi</a></li>
+        <li><a href="#estetica-element">Estètica (element de joc)</a></li>
+        <li><a href="#metes">Metes (Objectius)</a></li>
+        <li><a href="#narrativa">Narrativa</a></li>
+        <li><a href="#nivell">Nivell (Grau de Dificultat)</a></li>
+        <li><a href="#nivell-joc">Nivell de Joc</a></li>
+        <li><a href="#nivell-jugador">Nivell del Jugador</a></li>
+        <li><a href="#nivells">Nivells</a></li>
+        <li><a href="#recompensa">Recompensa</a></li>
+        <li><a href="#regles">Regles</a></li>
+        <li><a href="#retroaccio">Retroacció</a></li>
+        <li><a href="#temps">Temps</a></li>
+        <li><a href="#torna-intentar">Torna-ho a intentar</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Model MDA</h1>
+      <p>El model MDA és una metodologia que es basa en descompondre un videojoc en tres elements diferenciats: Mecànica, Dinàmica i Estètica.</p>
+      <img src="images/modelMDA.png" alt="Model MDA">
+
+      <h2 id="mecanica">Mecànica</h2>
+      <p>Les Mecàniques són les normes, regles i elements objectius del joc. Defineixen les accions que es poden realitzar i les condicions del joc.</p>
+
+      <h2 id="dinamica">Dinàmica</h2>
+      <p>La Dinàmica és el comportament del joc en acció, és a dir, com es desenvolupen les mecàniques en el transcurs del joc i com interaccionen amb el jugador.</p>
+
+      <h2 id="estetica">Estètica</h2>
+      <p>L'Estètica és la sensació o experiència que queda al jugador després de jugar. Inclou aspectes com la narrativa, el desafiament, la descoberta i altres sensacions desitjables.</p>
+
+      <br>
+      
+      <h1>Elements de Videojoc</h1>
+      <p>Els Elements de Videojoc són els components que defineixen i influeixen en l'experiència del jugador en un videojoc.</p>
+
+      <h2 id="abstraccio">Abstracció de Conceptes i Realitat</h2>
+      <p>L'Abstracció és la capacitat del joc per representar conceptes i situacions de la realitat de manera simplificada i comprensible pel jugador.</p>
+      <img src="images/abstraccio-realitat.avif" alt="Abstracció de conceptes i realitat">
+
+      <h2 id="conflicte">Conflicte, Competició o Cooperació</h2>
+      <p>El Conflicte és la situació de desacord entre forces o personatges del joc. La Competició és la lluita entre jugadors pel domini o la victòria. La Cooperació és la col·laboració entre jugadors per aconseguir un objectiu comú.</p>
+      <img src="images/competicio.jpg" alt="Competicio">
+
+      <h2 id="corba">Corba d'Interès</h2>
+      <p>La Corba d'Interès és la progressió de l'interès i l'emoció del jugador al llarg del joc. Generalment, comença amb una introducció tranquil·la, augmenta amb el conflicte i arriba al clímax amb la resolució.</p>
+      <img src="images/corba-interes.jpg" alt="Corba d'Interès">
+
+      <h2 id="viatge">El Viatge de l'Heroi</h2>
+      <p>El Viatge de l'Heroi és un patró narratiu comú en els videojocs en què el jugador assumeix el paper d'un heroi que ha de superar reptes i obstacles per aconseguir un objectiu.</p>
+      <img src="images/heroi.webp" alt="El viatge de l'Heroi">
+
+      <h2 id="estetica-element">Estètica (element de joc)</h2>
+      <p>L'Estètica és la sensació o experiència que queda al jugador després de jugar. Inclou aspectes com la narrativa, el desafiament, la descoberta i altres sensacions desitjables.</p>
+      <img src="images/estetica.jpg" alt="Estètica">
+
+      <h2 id="metes">Metes (Objectius)</h2>
+      <p>Les Metes són els objectius que el jugador ha de complir per avançar en el joc. Poden ser objectius a curt termini, com ara superar un nivell, o a llarg termini, com ara completar el joc.</p>
+      <img src="images/metes.jpg" alt="Metes">
+
+      <h2 id="narrativa">Narrativa</h2>
+      <p>La Narrativa és la història del joc, incloent-hi els personatges, els esdeveniments i els diàlegs. Una bona narrativa pot enriquir l'experiència del jugador.</p>
+      <img src="images/narrativa.gif" alt="Narrativa">
+
+      <h2 id="nivell">Nivell (Grau de Dificultat)</h2>
+      <p>El Nivell és el grau de dificultat del joc. Pot ser ajustat per proporcionar un repte adequat al jugador, o per adaptar-se a les seves habilitats.</p>
+      <img src="images/dificultad-videojuego.webp" alt="Dificultat">
+
+      <h2 id="nivell-joc">Nivell de Joc</h2>
+      <p>El Nivell de Joc és la progressió del jugador en el joc. Pot ser mesurat en punts, nivells o altres indicadors de progrés.</p>
+      <img src="images/nivel-juego.webp" alt="Nivell de Joc">
+
+      <h2 id="nivell-jugador">Nivell del Jugador</h2>
+      <p>El Nivell del Jugador és la capacitat i l'experiència del jugador en el joc. Pot ser mesurat en punts, nivells o altres indicadors de progrés.</p>
+      <img src="images/nivel.jpg" alt="Nivell de Jugador">
+
+      <h2 id="nivells">Nivells</h2>
+      <p>Els Nivells són les àrees o etapes del joc. Poden ser dissenyats per proporcionar una varietat d'experiències i reptes al jugador.</p>
+      <img src="images/nivells.webp" alt="Nivells">
+
+      <h2 id="recompensa">Recompensa</h2>
+      <p>La Recompensa és el premi que el jugador rep per complir un objectiu o superar un repte. Pot ser en forma de punts, objectes o habilitats.</p>
+      <img src="images/pantalla-final.jpg" alt="Recompensa">
+
+      <h2 id="regles">Regles</h2>
+      <p>Les Regles són les normes i condicions del joc. Defineixen les accions que es poden realitzar i les condicions del joc.</p>
+
+      <h2 id="retroaccio">Retroacció</h2>
+      <p>La Retroacció és la resposta del joc a les accions del jugador. Pot ser en forma de recompenses, punts o canvis en l'entorn del joc.</p>
+      <img src="images/retroaccio.webp" alt="Exemple vida de Mario Bros">
+
+      <h2 id="temps">Temps</h2>
+      <p>El Temps és un element important en molts videojocs. Pot ser utilitzat per crear pressió, establir objectius temporals o proporcionar una sensació de progrés.</p>
+      <img src="images/temps.png" alt="Temps">
+
+      <h2 id="torna-intentar">Torna-ho a intentar</h2>
+      <p>El Torna-ho a intentar és la capacitat del jugador per provar de nou després d'una derrota. Pot ser en forma de vides, punts o altres recursos.</p>
+      <img src="images/volver-a-intentar.avif" alt="Torna-ho a intentar">
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 - 2024 Ismael Iván A. B.</p>
+  </footer>
+</body>
+</html>

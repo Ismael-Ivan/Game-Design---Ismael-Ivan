@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipus de jugadors - Ismael Iván</title>
+  <style>
+    ::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6d72c3; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1a1e2b; /* Color del fondo de la barra de desplazamiento */
+}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0c0f17;
+      color: #e3e3e3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      min-height: 100vh; 
+    }
+
+    header {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      margin-top: 39px; 
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #6d72c3;
+    }
+
+    #top-menu {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #top-menu a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    #top-menu a:hover {
+      color: #9fa4e9;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #9fa4e9;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 120px;
+    }
+
+    .sidebar {
+      background: #282c3f;
+      color: #ffffff;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: width 0.3s;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar:hover {
+      width: 300px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #6d72c3;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #e3e3e3;
+      display: block;
+      padding: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #454d6a;
+    }
+
+    .content {
+      padding: 20px;
+      flex-grow: 1;
+      background: #1a1e2b;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      margin-bottom: 60px; 
+      transition: margin-bottom 0.3s ease; 
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #6d72c3;
+    }
+
+    p {
+      text-align: justify;
+      color: #e3e3e3;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 500px;
+      height: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+/* ------------------------ */
+    audio {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #2b2f3e;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    audio::-webkit-media-controls {
+      background-color: #1a1e2b;
+      border-radius: 5px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-pause-button,
+    audio::-webkit-media-controls-mute-button {
+      background-color: #6d72c3;
+      border-radius: 50%;
+    }
+
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    color: #6d72c3;
+  }
+
+/* Estilos para la barra de desplazamiento en WebKit (Chrome, Safari) */
+  audio::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  audio::-webkit-scrollbar-thumb {
+    background-color: #6d72c3;
+    border-radius: 6px;
+  }
+
+  audio::-webkit-scrollbar-track {
+    background-color: #2b2f3e;
+  }
+/* ----------------- */
+  video {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #2b2f3e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+    footer {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0 auto; /* Centra horizontalmente el texto */
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="top-menu">
+    <a href="../../indexS01/index.html">Menú</a>
+    <a href="../../A01/videojoc1/index.html">Videojoc (Metroid)</a>
+    <a href="../../A01/videojoc2/index.html">Videojoc (Pac-Man)</a>
+    <a href="../../A02/modelsdenegoci/index.html">Models de negoci</a>
+    <a href="../../A03/generesdevideojocs/index.html">Gèneres de videojocs</a>
+    <a href="../../A04/professionals/index.html">Professionals</a>
+    <a href="../../A05/fases-i-tasques/index.html">Fases i tasques</a>
+    <a href="../../A06/modelmda-elements/index.html">Model MDA i Elements</a>
+    <a href="#">Tipus de jugadors</a>
+  </div>
+  <header>
+    <h1>TIPUS DE JUGADORS</h1>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Índex</h2>
+      <ul>
+        <li><a href="#killers">Killers</a></li>
+        <li><a href="#achievers">Achievers</a></li>
+        <li><a href="#socialisers">Socialisers</a></li>
+        <li><a href="#explorers">Explorers</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Tipus de Jugadors</h1>
+      <p>En el món dels videojocs, hi ha diferents tipus de jugadors, cadascun amb les seves pròpies motivacions i preferències. A continuació es detallen els principals tipus de jugadors juntament amb una descripció i exemples en cada apartat:</p>
+      <img src="images/tiipusejugadors.png" alt="Tipus de Jugadors">
+
+      <h2 id="killers">Killers</h2>
+      <p>Els Killers són jugadors que es centren en la competició i en derrotar els altres jugadors. Busquen la emoció de la victòria i sovint es converteixen en experts en el joc per aconseguir-ho. Exemple: Un jugador que passa hores practicant per guanyar un torneig.</p>
+      <img src="images/killers.webp" alt="Killers">
+
+      <h2 id="achievers">Achievers</h2>
+      <p>Els Achievers són jugadors que es centren en aconseguir objectius i complir reptes dins del joc. Busquen la satisfacció de superar obstacles i aconseguir recompenses. Exemple: Un jugador que completa totes les missions d'un joc.</p>
+      <img src="images/archievers.jpg" alt="Archievers">
+
+      <h2 id="socialisers">Socialisers</h2>
+      <p>Els Socialisers són jugadors que es centren en la interacció amb altres jugadors i en la creació de comunitats dins del joc. Busquen la diversió i l'amistat. Exemple: Un jugador que passa hores parlant amb altres jugadors dins del joc.</p>
+      <img src="images/social.jpg" alt="Socialisers">
+
+      <h2 id="explorers">Explorers</h2>
+      <p>Els Explorers són jugadors que es centren en descobrir i experimentar dins del joc. Busquen la novetat i l'aventura. Exemple: Un jugador que passa hores explorant tots els racons d'un món obert.</p>
+      <img src="images/explorers.webp" alt="Explorers">
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 - 2024 Ismael Iván A. B.</p>
+  </footer>
+</body>
+</html>

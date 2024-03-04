@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formalitzant el videojoc - Ismael Iván</title>
+  <link href="../../styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="top-menu">
+    <a href="../../indexS02/index.html">Menú</a>
+    <a href="../../A01/eldissenyador/index.html">El dissenyador</a>
+    <a href="#">Formalitzant videojoc</a>
+    <a href="../../A03/les3cs/index.html">Les 3 C’S</a>
+    <a href="../../A04/dissenyhud/index.html">Disseny HUD</a>
+    <a href="../../A05/dissenynivells/index.html">Disseny nivells</a>
+    <a href="../../A06/elementsdelrepte/index.html">Elements del repte</a>
+    <a href="../../A07/inteligenciaartificial/index.html">Intel·ligència Artificial</a>
+    <a href="../../A08/premiantjugador/index.html">Premiant Al Jugador</a>
+    <a href="../../A09/multiplayer/index.html">Multiplayer</a>
+    <a href="../../A10/storyboardicinematiques/index.html">Storyboard/Cinemàtiques</a>
+  </div>
+  <header>
+    <h1>FORMALITZANT EL VIDEOJOC</h1>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Índex</h2>
+      <ul>
+        <li><a id="categoria" href="#resum-executiu">Game Design Document</a></li>
+        <li><a href="#concepte-joc">Concepte del Joc</a></li>
+        <li><a href="#Objectiu-joc">Objectiu del Joc</a></li>
+        <li><a id="categoria" href="#descripcio-joc">Descripció del Joc</a></li>
+        <li><a href="#plataformes">Plataformes</a></li>
+        <li><a href="#objectiu-public">Objectiu Públic</a></li>
+        <li><a id="categoria" href="#mecanica-joc">Mecànica del Joc</a></li>
+        <li><a href="#controls">Controls</a></li>
+        <li><a href="#jugabilitat-principal">Jugabilitat Principal</a></li>
+        <li><a href="#progres-joc">Progrés del Joc</a></li>
+        <li><a id="categoria" href="#historia-personatges">Història i Personatges</a></li>
+        <li><a href="#trama-joc">Trama del Joc</a></li>
+        <li><a href="#personatges-principals">Personatges Principals</a></li>
+        <li><a id="categoria" href="#art-estil">Art i Estil Visual</a></li>
+        <li><a href="#personatges-entorns">Personatges i Entorns</a></li>
+        <li><a id="categoria" href="#soimusica">So i Música</a></li>
+        <li><a href="#efecteso">Efectes de So / Música</a></li>
+        <li><a id="categoria" href="#prova">Prova</a></li>
+        <li><a href="#prova-pacman">Prova del Pac-Man</a></li>
+        <li><a id="categoria" href="#dafo">Anàlisis DAFO</a></li>
+        <li><a href="#fortaleses">Fortaleses</a></li>
+        <li><a href="#oportunitats">Oportunitats</a></li>
+        <li><a href="#debileses">Dèbilses</a></li>
+        <li><a href="#amenaces">Amenaces</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Pac-Man</h1>
+      <h1>Game Design Document</h1>
+
+      <h2 id="concepte-joc">Concepte del Joc</h2>
+      <p>Pac-Man és un joc arcade clàssic en què els jugadors controlen un personatge groc i rodó anomenat Pac-Man, que ha de menjar punts mentre evita els fantasmes en un laberint.</p>
+      <img src="images/pacman.jpg" alt="Joc del Pac-Man">
+
+      <h2 id="objectiu-joc">Objectiu del Joc</h2>
+      <p>L'objectiu és menjar tots els punts del laberint sense ser atrapat pels fantasmes. Els jugadors poden guanyar punts addicionals recollint fruites i, en menjar superpoders, poden perseguir i menjar temporalment els fantasmes.</p>
+
+      <br>
+      
+      <h1>Descripció del Joc</h1>
+  
+      <h2 id="plataformes">Plataformes</h2>
+      <p>Arcade, consoles, dispositius mòbils, PC</p>
+      <img src="images/plataformes.jpg" alt="Home jugant amb l'arcade">
+
+      <h2 id="objectiu-public">Objectiu Públic</h2>
+      <p>Jugadors de totes les edats que gaudeixen de jocs simples i addictius.</p>
+      
+      <br>
+      
+      <h1>Mecànica del Joc</h1>
+
+      <h2 id="controls">Controls</h2>
+      <p>Fletxes direccional (esquerra, dreta, amunt, avall) per moure Pac-Man.</p>
+      <img src="images/keyboard.png" alt="Controls">
+
+      <h2 id="jugabilitat-principal">Jugabilitat Principal</h2>
+      <p> Pac-Man ha de menjar tots els punts del laberint sense ser atrapat pels fantasmes. En menjar superpoders, Pac-Man pot perseguir i menjar temporalment els fantasmes.</p>
+      <img src="images/pacmancomiendo.gif" alt="Pac-Man menjant">
+
+      <h2 id="progres-joc">Progrés del Joc</h2>
+      <p>La dificultat augmenta a mesura que els jugadors avancen a nivells superiors amb laberints més complexos i fantasmes més ràpids.</p>
+      
+      <br>
+      
+      <h1>Història i Personatges</h1>
+
+      <h2 id="trama-joc">Trama del Joc</h2>
+      <p>No hi ha una història profunda; el joc es centra en la mecànica addictiva de menjar punts i evitar fantasmes.</p>
+
+      <h2 id="personatges-principals">Personatges Principals</h2>
+      <p>Pac-Man (protagonista), Fantasmes (Blinky, Pinky, Inky, Clyde - antagonistes).</p>
+      <img src="images/personatges.webp" alt="Personatges de Pac-Man">
+      <ul>
+        <li>
+          <strong>Blinky (també conegut com Shadow):</strong>
+          <p><strong>Funció:</strong> Blinky és el perseguidor principal. La seva missió és seguir directament a Pac-Man. És el fantasma més ràpid i pot ser el més agressiu en la seva persecució.</p>
+        </li>
+      
+        <li>
+          <strong>Pinky (també conegut com Speedy):</strong>
+          <p><strong>Funció:</strong> Pinky esforça anticipar-se a la posició de Pac-Man. En lloc de perseguir directament, Pinky es mou cap a un lloc davant de Pac-Man, intentant tallar el seu camí.</p>
+        </li>
+      
+        <li>
+          <strong>Inky (també conegut com Bashful):</strong>
+          <p><strong>Funció:</strong> Inky és una mica més complex en el seu comportament. Es mou entre la persecució i l'evasió. La seva posició es determina a partir de la relació entre Blinky i Pac-Man. Inky pot ser més imprevisible en el seu moviment.</p>
+        </li>
+      
+        <li>
+          <strong>Clyde (també conegut com Pokey):</strong>
+          <p><strong>Funció:</strong> Clyde té un comportament més variat. A vegades persegueix a Pac-Man, però quan està massa a prop, pot entrar en mode d'evasió i allunyar-se. Clyde pot ser menys previsible que els altres fantasmes.</p>
+        </li>
+      </ul>
+      
+      <br>
+      
+      <h1>Art i Estil Visual</h1>
+
+      <h2 id="personatges-entorns">Personatges i Entorns</h2>
+      <p>Pac-Man és un cercle groc, els fantasmes són colorits i tenen expressions distintives. Laberints amb punts, superpoders i fruites.</p>
+      <p>També he fet la representació amb llenguatje p5.js, <a id="linkp" href="https://editor.p5js.org/xismael7x/sketches/2V7kgPp97" target="_blank">ㅤclic aqui</a> per veure-ho.</p>
+      <img src="images/pacmanlogo2.png" alt="Imatge de Pac-Man">
+
+      <br>
+      
+      <h1>So i Música</h1>
+
+      <h2 id="efecteso">Efectes de so / Música</h2>
+      <p>Pac-Man no té música en si, està més compost per efecte de so, per exemple: quan perds, quan menges un superpoder, quan reinicies/inicies partida, i tot això està compost en una sola partida, com son tan repetitius, aconsegueixen hi hagi cap espai en silenci</p>
+      <audio controls>
+        <source src="images/pacmansong.mp3" type="audio/mp3" alt="So principal Mario Bros">
+      </audio>
+
+      <br>
+      
+      <h1>Prova</h1>
+
+      <h2 id="prova-pacman">Prova del Pac-Man</h2>
+      <p>Hi han moltes formes, de provar el joc de Pac-Man gratuïtament, unes d'aquestes opciones és jugar gràcies a Google, en el següent enllaç <a id="linkp" href= https://www.google.com/logos/2010/pacman10-i.html target="_blank">ㅤclic aquí</a>per jugar al Pac-Man de Google</p>
+      <img src="images/pacmangoogle.png" alt="Imatge del Pac-Man de Google">
+      
+      <br>
+      
+      <h1>Anàlisis DAFO</h1>
+      <img src="images/DAFO.webp" alt="Imatge DAFO">
+
+      <h2 id="fortaleses">Fortaleses</h2>
+      <ol>
+        <li>
+          <strong>Reconeixement de Marca:</strong>
+          <p>Pac-Man és un joc icònic amb un reconeixement de marca global, facilitant l'atracció de jugadors de totes les edats.</p>
+        </li>
+      
+        <li>
+          <strong>Jugabilitat Simple i Addictiva:</strong>
+          <p>La mecànica simple de menjar punts i evitar fantasmes fa que el joc sigui fàcil d'entendre i jugar, atreient tant a jugadors casuals com a fanàtics dels videojocs.</p>
+        </li>
+      
+        <li>
+          <strong>Adaptabilitat a Múltiples Plataformes:</strong>
+          <p>Pac-Man ha estat exitós en diverses plataformes al llarg dels anys, des de màquines arcade fins a consoles i dispositius mòbils.</p>
+        </li>
+      
+        <li>
+          <strong>Possibilitat d'Actualitzacions i Noves Versions:</strong>
+          <p>La simplicitat del concepte permet la creació de noves versions, actualitzacions i col·laboracions temàtiques, mantenint el "toc" del joc.</p>
+        </li>
+      </ol>
+
+      <h2 id="oportunitats">Oportunitats</h2>
+      <ol>
+        <li>
+          <strong>Mercat Retro:</strong>
+          <p>Hi ha un mercat creixent de jugadors nostàlgics que busquen experiències de joc retro, el que podria beneficiar a Pac-Man.</p>
+        </li>
+      
+        <li>
+          <strong>Col·laboracions i Merchandising:</strong>
+          <p>Col·laboracions amb altres marques i la creació de productes de merchandising poden generar ingressos addicionals i mantenir l'interès en Pac-Man.</p>
+        </li>
+      
+        <li>
+          <strong>Innovació en Plataformes Emergents:</strong>
+          <p>Explorar noves plataformes emergents, com la realitat virtual o augmentada, podria proporcionar oportunitats emocionants per reinventar l'experiència de joc de Pac-Man.</p>
+        </li>
+      </ol>
+
+      <h2 id="debileses">Dèbilses</h2>
+      <ol>
+        <li>
+          <strong>Gràfics i Tecnologia Antigues:</strong>
+          <p>Tot i que l'estil retro és part de l'encant de Pac-Man, la tecnologia antiga podria limitar el seu atractiu per als jugadors més joves acostumats a gràfics més avançats.</p>
+        </li>
+      
+        <li>
+          <strong>Competència en el Mercat de Jocs Mòbils:</strong>
+          <p>En el mercat saturat de jocs mòbils, Pac-Man pot enfrontar-se a la competència de jocs més nous i visualment atractius.</p>
+        </li>
+      </ol>
+
+      <h2 id="amenaces">Amenaces</h2>
+<ol>
+  <li>
+    <strong>Desgast de la Marca:</strong>
+    <p>L'excés d'adaptacions i versions podria portar al desgast de la marca Pac-Man si no es gestionen adequadament.</p>
+  </li>
+
+  <li>
+    <strong>Canvis en les Preferències del Jugador:</strong>
+    <p>Les preferències dels jugadors poden canviar amb el temps, i el joc podria perdre rellevància si no s'actualitza per satisfer les expectatives actuals.</p>
+  </li>
+
+  <li>
+    <strong>Pirateria i Imitacions:</strong>
+    <p>La popularitat de Pac-Man podria donar lloc a la pirateria i la creació d'imitacions, la qual cosa podria afectar la reputació i els ingressos del joc original.</p>
+  </li>
+</ol>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 - 2024 Ismael Iván A. B.</p>
+  </footer>
+</body>
+</html>

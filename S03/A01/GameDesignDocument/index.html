@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model MDA i Elements d'un Videojoc - Ismael Iván</title>
+  <style>
+    ::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6d72c3; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1a1e2b; /* Color del fondo de la barra de desplazamiento */
+}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0c0f17;
+      color: #e3e3e3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      min-height: 100vh; 
+    }
+
+    header {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      margin-top: 39px; 
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #6d72c3;
+    }
+
+    #top-menu {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #top-menu a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    #top-menu a:hover {
+      color: #9fa4e9;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #6d72c3;
+      text-decoration: none;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #9fa4e9;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 120px;
+    }
+
+    .sidebar {
+      background: #282c3f;
+      color: #ffffff;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: width 0.3s;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar:hover {
+      width: 300px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #6d72c3;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #e3e3e3;
+      display: block;
+      padding: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #454d6a;
+    }
+
+    .content {
+      padding: 20px;
+      flex-grow: 1;
+      background: #1a1e2b;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      margin-bottom: 60px; 
+      transition: margin-bottom 0.3s ease; 
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #6d72c3;
+    }
+
+    p {
+      text-align: justify;
+      color: #e3e3e3;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+/* ------------------------ */
+    audio {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #2b2f3e;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    audio::-webkit-media-controls {
+      background-color: #1a1e2b;
+      border-radius: 5px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-pause-button,
+    audio::-webkit-media-controls-mute-button {
+      background-color: #6d72c3;
+      border-radius: 50%;
+    }
+
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    color: #6d72c3;
+  }
+
+/* Estilos para la barra de desplazamiento en WebKit (Chrome, Safari) */
+  audio::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  audio::-webkit-scrollbar-thumb {
+    background-color: #6d72c3;
+    border-radius: 6px;
+  }
+
+  audio::-webkit-scrollbar-track {
+    background-color: #2b2f3e;
+  }
+/* ----------------- */
+  video {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #2b2f3e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+    footer {
+      background: #1a1e2b;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0 auto; 
+      text-align: center;
+    }
+
+    #categoria {
+      background-color: #0c0f17;
+    }
+
+    #imgp {
+      width: 16px;
+      height: 16px;
+    }
+
+    #linkp {
+      color: #6d72c3;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    #linkp:hover {
+      color: #9fa4e9;
+    }
+  </style>
+</head>
+<body>
+  <div id="top-menu">
+    <a href="../../indexS03/index.html">Menú</a>
+    <a href="#">Game Design Document</a>
+    <!--<a href="#">Formalitzant videojoc</a>
+    <a href="../../A03/les3cs/index.html">Les 3 C’S</a>
+    <a href="../../A04/dissenyhud/index.html">Disseny HUD</a>
+    <a href="../../A05/dissenynivells/index.html">Disseny nivells</a>
+    <a href="../../A06/elementsdelrepte/index.html">Elements del repte</a>
+    <a href="../../A07/inteligenciaartificial/index.html">Intel·ligència Artificial</a>
+    <a href="../../A08/premiantjugador/index.html">Premiant Al Jugador</a>
+    <a href="../../A09/multiplayer/index.html">Multiplayer</a>
+    <a href="../../A10/storyboardicinematiques/index.html">Storyboard/Cinemàtiques</a>-->
+  </div>
+  <header>
+    <h1>GAME DESIGN DOCUMENT</h1>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Índex</h2>
+      <ul>
+        <li><a id="categoria" href="#resum-executiu">Game Design Document</a></li>
+        <li><a href="#concepte-joc">Concepte del Joc</a></li>
+        <li><a href="#Objectiu-joc">Objectiu del Joc</a></li>
+        <li><a id="categoria" href="#descripcio-joc">Descripció del Joc</a></li>
+        <li><a href="#plataformes">Plataformes</a></li>
+        <li><a href="#objectiu-public">Objectiu Públic</a></li>
+        <li><a id="categoria" href="#mecanica-joc">Mecànica del Joc</a></li>
+        <li><a href="#controls">Controls</a></li>
+        <li><a href="#jugabilitat-principal">Jugabilitat Principal</a></li>
+        <li><a href="#progres-joc">Progrés del Joc</a></li>
+        <li><a id="categoria" href="#historia-personatges">Història i Personatges</a></li>
+        <li><a href="#trama-joc">Trama del Joc</a></li>
+        <li><a href="#personatges-principals">Personatges Principals</a></li>
+        <li><a id="categoria" href="#art-estil">Art i Estil Visual</a></li>
+        <li><a href="#personatges-entorns">Personatges i Entorns</a></li>
+        <li><a id="categoria" href="#prova">Prova</a></li>
+        <li><a href="#prova-joc">Prova del Pac-Man</a></li>
+        <li><a id="categoria" href="#instruccions">Instruccions</a></li>
+        <li><a href="#instruccions-d">Instruccions de descàrrega</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Game Design Document</h1>
+
+      <h2 id="concepte-joc">Concepte del Joc</h2>
+      <p>Es tracta d’un joc de cotxes i rapidesa, on un jugador donarà clic a la pantalla, i podrà avançar el cotxe.</p>
+      <img src="images/pacman.jpg" alt="Joc del Pac-Man">
+
+      <h2 id="objectiu-joc">Objectiu del Joc</h2>
+      <p>Tindràs que competir amb un bot, del que mica en mica, més nivells tindrás, i el bot anirà més rápid. En cas de perdre contra el bot, no podrás avançar de nivell, i només et quedarà l’opció de reiniciar el joc, i tornar a començar.</p>
+
+      <br>
+      
+      <h1>Descripció del Joc</h1>
+  
+      <h2 id="plataformes">Plataformes</h2>
+      <p>Dispositius mòbils</p>
+      <img src="images/plataformes.jpg" alt="Home jugant amb l'arcade">
+
+      <h2 id="objectiu-public">Objectiu Públic</h2>
+      <p>Jugadors de totes les edats que gaudeixen de jocs simples.</p>
+      
+      <br>
+      
+      <h1>Mecànica del Joc</h1>
+
+      <h2 id="controls">Controls</h2>
+      <p>Fer clic a la pantalla el més ràpid de puguis.</p>
+
+      <h2 id="jugabilitat-principal">Jugabilitat Principal</h2>
+      <p>Veure que tan rápid pots ser.</p>
+
+      <h2 id="progres-joc">Progrés del Joc</h2>
+      <p>La dificultat augmenta a mesura que els jugadors avancen a nivells superiors, ja que el bot anirà cada vegada més ràpid.</p>
+      
+      <br>
+      
+      <h1>Història i Personatges</h1>
+
+      <h2 id="trama-joc">Trama del Joc</h2>
+      <p>No hi ha una cap història. Simplement es tracta de veure que tan rápid pots ser.</p>
+
+      <h2 id="personatges-principals">Personatges Principals</h2>
+      <p>Només son dos vehicles, un de color blau, altre de color vermell.</p>
+      <img src="images/personatges.webp" alt="Personatges de Pac-Man">
+      
+      <br>
+      
+      <h1>Prova</h1>
+
+      <h2 id="prova-joc">Prova del Joc</h2>
+      <p>El joc està en GitHub, en el meu perfil <a id="linkp" href="https://github.com/xismael7x/TreballDeRecerca_IsmaelIvan/blob/main/TreballDeRecerca_IsmaelIvan.aia" target="_blank">ㅤclic aquí</a>per provar el joc d'App Inventor</p>
+
+      <h1>Instruccions</h1>
+
+      <h2 id="instruccions-d">Instruccions per provar-ho</h2>
+      <p>Primer de tot hauràs d'accedir al meu GitHub <a id="linkp" href="https://github.com/xismael7x/TreballDeRecerca_IsmaelIvan/blob/main/TreballDeRecerca_IsmaelIvan.aia" target="_blank">ㅤclic aquí</a>.</p>
+      <img src="images/pacmangoogle.png" alt="Imatge del Pac-Man de Google">
+      
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 - 2024 Ismael Iván A. B.</p>
+  </footer>
+</body>
+</html>

@@ -156,7 +156,7 @@
     img {
       display: block;
       margin: 20px auto;
-      max-width: 100%;
+      max-width: 75%;
       height: auto;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
@@ -252,15 +252,6 @@
   <div id="top-menu">
     <a href="../../indexS03/index.html">Menú</a>
     <a href="#">Game Design Document</a>
-    <!--<a href="#">Formalitzant videojoc</a>
-    <a href="../../A03/les3cs/index.html">Les 3 C’S</a>
-    <a href="../../A04/dissenyhud/index.html">Disseny HUD</a>
-    <a href="../../A05/dissenynivells/index.html">Disseny nivells</a>
-    <a href="../../A06/elementsdelrepte/index.html">Elements del repte</a>
-    <a href="../../A07/inteligenciaartificial/index.html">Intel·ligència Artificial</a>
-    <a href="../../A08/premiantjugador/index.html">Premiant Al Jugador</a>
-    <a href="../../A09/multiplayer/index.html">Multiplayer</a>
-    <a href="../../A10/storyboardicinematiques/index.html">Storyboard/Cinemàtiques</a>-->
   </div>
   <header>
     <h1>GAME DESIGN DOCUMENT</h1>
@@ -269,86 +260,186 @@
     <div class="sidebar">
       <h2>Índex</h2>
       <ul>
-        <li><a id="categoria" href="#resum-executiu">Game Design Document</a></li>
-        <li><a href="#concepte-joc">Concepte del Joc</a></li>
-        <li><a href="#Objectiu-joc">Objectiu del Joc</a></li>
-        <li><a id="categoria" href="#descripcio-joc">Descripció del Joc</a></li>
+        <li><a id="categoria" href="#contingut-del-joc">CONTINGUT DEL JOC</a></li>
+        <li><a href="#nivells">Nivells</a></li>
+        <li><a href="#personatges">Personatges</a></li>
+        <li><a href="#npc">NPCs</a></li>
+        <li><a href="#sons-i-musica">Sons i música</a></li>
+        <li><a id="categoria" href="#interficie">INTERFÍCIE D'USUARI</a></li>
+        <li><a href="#pantalla-carrega">Pantalla de carrega</a></li>
+        <li><a href="#menu-principal">Menú principal</a></li>
+        <li><a href="#pantalla-ajust">Pantalla d’ajustaments</a></li>
+        <li><a href="#pantalla-joc">Pantalla de joc</a></li>
+        <li><a id="categoria" href="#tema">TEMA</a></li>
+        <li><a href="#tematica">Temàtica del videojoc</a></li>
+        <li><a id="categoria" href="#descripcio-joc">DESCRIPCIÓ DEL JOC</a></li>
         <li><a href="#plataformes">Plataformes</a></li>
-        <li><a href="#objectiu-public">Objectiu Públic</a></li>
-        <li><a id="categoria" href="#mecanica-joc">Mecànica del Joc</a></li>
-        <li><a href="#controls">Controls</a></li>
-        <li><a href="#jugabilitat-principal">Jugabilitat Principal</a></li>
-        <li><a href="#progres-joc">Progrés del Joc</a></li>
-        <li><a id="categoria" href="#historia-personatges">Història i Personatges</a></li>
-        <li><a href="#trama-joc">Trama del Joc</a></li>
-        <li><a href="#personatges-principals">Personatges Principals</a></li>
-        <li><a id="categoria" href="#art-estil">Art i Estil Visual</a></li>
-        <li><a href="#personatges-entorns">Personatges i Entorns</a></li>
-        <li><a id="categoria" href="#prova">Prova</a></li>
-        <li><a href="#prova-joc">Prova del Pac-Man</a></li>
-        <li><a id="categoria" href="#instruccions">Instruccions</a></li>
-        <li><a href="#instruccions-d">Instruccions de descàrrega</a></li>
+        <li><a href="#objectiu-public">Objectiu públic</a></li>
+        <li><a id="categoria" href="#les3c">LES 3C’S</a></li>
+        <li><a href="#caracter">Caràcter</a></li>
+        <li><a href="#camera">Càmera</a></li>
+        <li><a href="#control">Control</a></li>
+        <li><a id="categoria" href="#dissenyHUD">DISSENY DEL HUD</a></li>
+        <li><a href="#analisisHUD">Análisis del HUD</a></li>
+        <li><a id="categoria" href="#premiant-jugador">PREMIANT AL JUGADOR</a></li>
+        <li><a href="#punts-reaparicio">Punts de reaparició</a></li>
+        <li><a href="#high-score">High Score</a></li>
+        <li><a id="categoria" href="#multiplayer">MULTIPLAYER</a></li>
+        <li><a href="#n-jugadors">Nº de Jugadors</a></li>
+        <li><a href="#tipus-connexio">Tipus de connexió</a></li>
+        <li><a id="categoria" href="#sto-cin">STORYBOARD I CINEMÀTIQUES</a></li>
+        <li><a href="#sto-cin2">Storyboard i cinemàtiques del joc</a></li>
+        <li><a id="categoria" href="#model-mda">MODEL MDA</a></li>
+        <li><a href="#meca">Mecànica</a></li>
+        <li><a href="#dina">Dinàmica</a></li>
+        <li><a href="#estet">Estètica</a></li>
+        <li><a id="categoria" href="#elements-videoj">ELEMENTS DEL VIDEOJOC</a></li>
+        <li><a href="#metes">Metes (Objectius)</a></li>
+        <li><a href="#corba">Corba d’interès</a></li>
+        <li><a href="#nivell">Nivell (Grau de dificultat)</a></li>
+        <li><a href="#torna">Torna-ho a intentar</a></li>
       </ul>
     </div>
 
     <div class="content">
-      <h1>Game Design Document</h1>
+      <h1>Game Design Document: Projecte Final</h1>
+      <p>Pots visualitzar el document PDF en el següent enllaç:</p>
+      <p><a id="linkp" href="pdf/index.html" target="_blank">Game Design Document</a> <i>de Ismael Iván A. B.</i></p>
 
-      <h2 id="concepte-joc">Concepte del Joc</h2>
-      <p>Es tracta d’un joc de cotxes i rapidesa, on un jugador donarà clic a la pantalla, i podrà avançar el cotxe.</p>
-      <img src="images/pacman.jpg" alt="Joc del Pac-Man">
+      <br>
 
-      <h2 id="objectiu-joc">Objectiu del Joc</h2>
-      <p>Tindràs que competir amb un bot, del que mica en mica, més nivells tindrás, i el bot anirà més rápid. En cas de perdre contra el bot, no podrás avançar de nivell, i només et quedarà l’opció de reiniciar el joc, i tornar a començar.</p>
+      <h1>CONTINGUT DEL JOC</h1>
+      <h2 id="nivells">Nivells</h2>
+      <p>El joc es desenvolupa en un únic "mapa", que consisteix en un senzill carrer, amb tres opcions de menú: Sortir, Reiniciar i Següent Nivell, que apareixen al superar cada nivell.</p>
+      <img src="images/image1.png" alt="Botons del videojoc">
+
+      <h2 id="personatges">Personatges</h2>
+      <p>Considerant els "personatges", trobem dos vehicles: un de color vermell i un altre de color blau. El vehicle controlat pel jugador es distingeix pel seu color vermell, mentre que el bot és representat pel vehicle blau.</p>
+      <img src="images/image2.png" alt="Vehicles">
+
+      <h2 id="npc">NPCs</h2>
+      <p>Com s'ha esmentat anteriorment, el personatge no jugable (NPC) és el vehicle blau, que incrementa la seva velocitat amb cada nivell superat.</p>
+
+      <h2 id="sons-i-musica">Sons i música</h2>
+      <p>Encara que el joc careix principalment de música, presenta dos tipus de sons: el de victòria i el de derrota.</p>
 
       <br>
       
-      <h1>Descripció del Joc</h1>
+      <h1>INTERFÍCIE D’USUARI</h1>
   
+      <h2 id="pantalla-carrega">Pantalla de carrega</h2>
+      <p>El joc consta de quatre pantalles senzilles, sent la primera una pantalla de càrrega que mostra el logotip del joc i una barra de progrés que indica l'avanç.</p>
+      <img src="images/image3.png" alt="Pantalla de carrega">
+
+      <h2 id="menu-principal">Menú principal</h2>
+      <p>És fonamental comptar amb un menú principal que inclogui opcions bàsiques, com accedir a la configuració, començar el joc i sortir del mateix.</p>
+      <img src="images/image4.png" alt="Menú principal">
+
+      <h2 id="pantalla-ajust">Pantalla d’ajustaments</h2>
+      <p>Des del menú principal, es pot accedir a la pantalla de configuració, que ofereix una opció senzilla, com activar o desactivar el so del joc.</p>
+      <img src="images/image5.png" alt="Pantalla d'ajustaments (configuració)">
+
+      <h2 id="pantalla-joc">Pantalla de joc</h2>
+      <p>La pantalla de joc és la més rellevant, ja que en ella es mostra la base del joc i s'inclou un comptador de nivells, això ajuda a indicar també quan el bot augmentarà la seva velocitat.</p>
+      <img src="images/image6.png" alt="Pantalla de joc">
+
+      <br>
+      
+      <h1>TEMA</h1>
+
+      <h2 id="tematica">Temàtica del videojoc</h2>
+      <p>El joc es situa en carreres, on el jugador competeix amb un altre vehicle per determinar qui és més ràpid, requerint una ràpida pulsació a la pantalla per superar l’altre vehicle.</p>
+
+      <br>
+      
+      <h1>DESCRIPCIÓ DEL JOC</h1>
+
       <h2 id="plataformes">Plataformes</h2>
-      <p>Dispositius mòbils</p>
-      <img src="images/plataformes.jpg" alt="Home jugant amb l'arcade">
+      <p>Dissenyat per a dispositius mòbils amb sistema operatiu Android.</p>
 
-      <h2 id="objectiu-public">Objectiu Públic</h2>
-      <p>Jugadors de totes les edats que gaudeixen de jocs simples.</p>
+      <h2 id="objectiu-public">Objectiu públic</h2>
+      <p>Aquest joc de carreres està pensat per a tots els públics i és ideal per passar el temps lliure.</p>
       
       <br>
       
-      <h1>Mecànica del Joc</h1>
+      <h1>LES 3C’S</h1>
 
-      <h2 id="controls">Controls</h2>
-      <p>Fer clic a la pantalla el més ràpid de puguis.</p>
+      <h2 id="caracter">Caràcter</h2>
+      <p>En aquest joc és una cosa básica, tindre diferents colors, o qualsevol cosa per diferenciar-se entre ser el jugador principal, o l’NPC en els cotxes per poder distinguir qui personatge ets a l’hora de jugar, i contra qui has de competir.</p>
+      
+      <h2 id="camera">Càmera</h2>
+      <p>La càmera en aquest joc adopta una vista fixa, similar a l'observació d'una carrera des d'un punt de vista elevat, com si fos des d'un dron. Aquesta perspectiva proporciona una visió panoràmica de l'entorn de la pista, permetent als jugadors poder veure millor la carretera, i la línia de meta.</p>
+      
+      <h2 id="control">Control</h2>
+      <p>Els controls són senzills, ja que es tracta d'un joc mòbil per a Android que es juga únicament mitjançant la pantalla tàctil.</p>
 
-      <h2 id="jugabilitat-principal">Jugabilitat Principal</h2>
-      <p>Veure que tan rápid pots ser.</p>
+      <br>
 
-      <h2 id="progres-joc">Progrés del Joc</h2>
-      <p>La dificultat augmenta a mesura que els jugadors avancen a nivells superiors, ja que el bot anirà cada vegada més ràpid.</p>
+      <h1>DISSENY DEL HUD</h1>
+
+      <h2 id="analisisHUD">Análisis del HUD</h2>
+      <p>El joc presenta un HUD senzill i estàtic durant la partida, ocupant poc espai a la pantalla. Aquest HUD està dissenyat per proporcionar informació essencial al jugador sense interrompre la seva experiència visual. A la part superior de la pantalla es mostren elements com la distància recorreguda i la línia de meta, permetent als jugadors conèixer la seva posició i progressió a la carrera.</p>
+      <p>Els botons de control es col·loquen de manera estratègica a la part superior de la pantalla, fora de la línia de visió principal del jugador. Això assegura que l'espai de la pantalla estigui completament lliure perquè els jugadors puguin centrar-se en la jugabilitat sense interferir en la seva visió del joc. </p>
+
+      <br>
+
+      <h1>PREMIANT AL JUGADOR</h1>
+
+      <h2 id="punts-reaparicio">Punts de reaparició</h2>
+      <p>El principal punt de reaparició en el joc és al principi de la partida. Quan es perd, el jugador torna a començar des del principi i el comptador de nivells es reinicia a zero. Això significa que s'ha de tornar a acumular nivells des del principi.</p>
+      
+      <h2 id="high-score">High Score</h2>
+      <p>Encara que no hi ha monedes, punts o elogis en aquest joc, els nivells actuen com a indicador de progrés i habilitat. A mida que el jugador avança a través dels nivells, es pot considerar més ràpid i experimentat. D'aquesta manera, el progrés en els nivells serveix com a mesura del rendiment i l'èxit del jugador, tot i que no es reflecteixi en una puntuació específica o un rècord personal.</p>
       
       <br>
-      
-      <h1>Història i Personatges</h1>
 
-      <h2 id="trama-joc">Trama del Joc</h2>
-      <p>No hi ha una cap història. Simplement es tracta de veure que tan rápid pots ser.</p>
+      <h1>MULTIPLAYER</h1>
 
-      <h2 id="personatges-principals">Personatges Principals</h2>
-      <p>Només son dos vehicles, un de color blau, altre de color vermell.</p>
-      <img src="images/personatges.webp" alt="Personatges de Pac-Man">
+      <h2 id="n-jugadors">Nº de Jugadors</h2>
+      <p>Aquest joc és dissenyat per a una experiència d'un sol jugador, en un format 1 vs 1, on el jugador enfronta al bot.</p>
       
+      <h2 id="tipus-connexio">Tipus de connexió</h2>
+      <p>El joc opera de manera independent sense necessitat de connexió a internet, essent totalment offline. Això significa que els jugadors poden gaudir de la seva experiència de joc sense dependre de cap connexió externa, ja que estan competint exclusivament contra el bot i no requereixen d'una connexió a la xarxa. Això proporciona flexibilitat i accessibilitat per jugar en qualsevol moment i en qualsevol lloc sense restriccions de connectivitat.</p>
+
       <br>
+
+      <h1>STORYBOARD I CINEMÀTIQUES</h1>
+
+      <h2 id="sto-cin2">Storyboard i cinemàtiques del joc</h2>
+      <p>La cinemàtica d'aquest joc és senzilla i pot semblar repetitiva perquè es desenvolupa en un escenari estàtic. No obstant això, aquesta simplicitat s'entén perquè l'escenari és constant i l'únic canvi significatiu és la velocitat del cotxe blau, que actua com a principal desafiament per al jugador. Quan el cotxe vermell (controlat pel jugador principal) perd, es reinicia el joc pràcticament des del principi, donant lloc a un cicle de joc simple i directe, però que pot generar un repte progressiu a mesura que el bot millora la seva velocitat. </p>
+      <img src="images/image7.png" alt="Mostra de la cinematica del joc">
+
+      <br>
+
+      <h1>MODEL MDA</h1>
+
+      <h2 id="meca">Mecànica</h2>
+      <p>La mecànica principal pot consistir a utilitzar la pantalla tàctil per interactuar amb el joc. L'objectiu sempre serà vèncer al vehicle blau i ser el més ràpid.</p>
+
+      <h2 id="dina">Dinàmica</h2>
+      <p>La dinàmica del joc es centra en la competició entre el jugador (controlant el cotxe vermell) i el vehicle blau (controlat per l'ordinador). A mesura que avança el joc, la velocitat del vehicle blau augmenta, augmentant així la dificultat i el repte per al jugador. La dinàmica de la carrera es simplement, superar a l’altre vehicle, que serà el “competidor”.</p>
       
-      <h1>Prova</h1>
+      <h2 id="estet">Estètica</h2>
+      <p>L'estètica del joc és senzilla i fàcil de comprendre. El disseny de la pista de carreres és consistent a través dels diferents nivells, amb canvis mínims en l'entorn visual. Tot i això, els detalls com els colors dels vehicles i els elements del HUD proporcionen una estètica simple, coherent i fácil d’entendre per totes les edats.</p>
 
-      <h2 id="prova-joc">Prova del Joc</h2>
-      <p>El joc està en GitHub, en el meu perfil <a id="linkp" href="https://github.com/xismael7x/TreballDeRecerca_IsmaelIvan/blob/main/TreballDeRecerca_IsmaelIvan.aia" target="_blank">ㅤclic aquí</a>per provar el joc d'App Inventor</p>
+      <br>
 
-      <h1>Instruccions</h1>
+      <h1>ELEMENTS DEL VIDEOJOC</h1>
 
-      <h2 id="instruccions-d">Instruccions per provar-ho</h2>
-      <p>Primer de tot hauràs d'accedir al meu GitHub <a id="linkp" href="https://github.com/xismael7x/TreballDeRecerca_IsmaelIvan/blob/main/TreballDeRecerca_IsmaelIvan.aia" target="_blank">ㅤclic aquí</a>.</p>
-      <img src="images/pacmangoogle.png" alt="Imatge del Pac-Man de Google">
-      
+      <h2 id="metes">Metes (Objectius)</h2>
+      <p>La principal meta del joc és arribar al final de la carretera, on es troba la bandera, mentre més gran sigui la diferència de rang entre el cotxe vermell i el blau, més fàcil serà guanyar. Això significa que el jugador ha de mantenir una distància significativa entre els dos vehicles per assolir la victòria.</p>
+
+      <h2 id="corba">Corba d’interès</h2>
+      <p>La corba d'interès del joc pot variar segons l'emoció i la competència del jugador. A mesura que la competició s'intensifica i la distància entre els dos cotxes es redueix, l'interès i l'excitació del jugador augmenten. Aquesta corba d'interès reflecteix l'augment de la tensió. Un exemple gràfic pot ser el següent:</p>
+      <img src="images/images8.png" alt="Corba d'interes: Exemple">
+
+      <h2 id="nivell">Nivell (Grau de dificultat)</h2>
+      <p>A mesura que el jugador avança de nivell, la dificultat del joc augmenta de manera exponencial. El bot incrementa la seva velocitat progressivament, com si fos una gràfica de potències en matemàtiques, augmentant el repte i l'exigència per al jugador. Aquesta progressió gradual de la dificultat manté el joc “desafiant”.</p>
+
+      <h2 id="torna">Torna-ho a intentar</h2>
+      <p>Un altre element clau és la possibilitat de tornar a intentar la partida. Després de perdre, l'única opció per al jugador és reiniciar la carrera i intentar superar els desafiaments de nou.</p>
+
+      <br>
     </div>
   </div>
   <footer>
